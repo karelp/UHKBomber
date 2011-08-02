@@ -52,6 +52,24 @@ private:
 		{}
 		
 
+	/**
+	 * @brief
+	 * Parses command line arguments.
+	 * 
+	 * @param parameters
+	 * List of the command line arguments, including the zeroth parameter containing binary path.
+	 * 
+	 * Parses and processes the command line arguments. These arguments override any settings specified
+	 * in options.
+	 * 
+	 * @remarks
+	 * Must be called after options have been loaded.
+	 * 
+	 * @see
+	 * Options::loadFromFile
+	 */
+	void parseCommandLine(const std::list<std::string>& parameters);
+
 public:
 	/**
 	 * @brief
@@ -97,6 +115,10 @@ public:
 
 	System& system() { return m_system; }
 	const System& system() const { return m_system; }
+
+public:
+	// Constants
+	static const char *name;
 };
 
 #endif
