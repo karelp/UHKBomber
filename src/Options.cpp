@@ -2,6 +2,9 @@
 #include "IniReader.h"
 #include "Options.h"
 
+const char *Options::optionsFileName = "cfg/options.cfg";
+const char *Options::defaultSectionName = "main";
+
 /**
  * @brief
  * A custom specialization of IniReader to read options file.
