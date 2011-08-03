@@ -78,7 +78,7 @@ public:
 
 	bool isInitialized() const { return m_initialized; }
 
-	~System();
+	~System() { }
 
 public:
 	// Constants
