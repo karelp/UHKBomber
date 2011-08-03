@@ -75,7 +75,7 @@ public:
 	OptionsField(const T& val) : m_value(val) { }
 	operator T() const { return m_value; }
 	operator T&() { return m_value; }
-	OptionsField& operator= (const T& val) { m_value = val; }
+	OptionsField& operator= (const T& val) { m_value = val; return *this; }
 
 	void fromString(const std::string& str) override
 	{
