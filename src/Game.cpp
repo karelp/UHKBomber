@@ -20,7 +20,7 @@ bool Game::initialize(const std::list<std::string>& parameters)
 	if (m_initialized)
 		return true;
 
-	if (m_options.loadFromFile(Options::optionsFileName))  {
+	if (!m_options.loadFromFile(Options::optionsFileName))  {
 		// TODO: logging system
 		// Not fatal, we have defaults, move on
 	}
