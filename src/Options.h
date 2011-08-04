@@ -20,6 +20,9 @@ public:
 	 * 
 	 * @param str
 	 * The string parameter to convert to the option
+	 *
+	 * @throws
+	 * boost::bad_lexical_cast
 	 * 
 	 * @remarks
 	 * Used when loading options.
@@ -70,8 +73,9 @@ private:
 public:
 	OptionsField() : m_value() { }
 	OptionsField(const T& val) : m_value(val) { }
-	operator T() { return m_value; }
-	OptionsField& operator= (const T& val) { m_value = val; }
+	operator T() const { return m_value; }
+	operator T&() { return m_value; }
+	OptionsField& operator= (const T& val) { m_value = val; return *this; }
 
 	void fromString(const std::string& str) override
 	{
@@ -80,7 +84,12 @@ public:
 
 	std::string toString() const override
 	{
-		return boost::lexical_cast<std::string>(m_value);
+		try {
+			std::string res = boost::lexical_cast<std::string>(m_value);
+			return res;
+		} catch (boost::bad_lexical_cast&)  {
+			return "";
+		}
 	}
 };
 
@@ -101,6 +110,7 @@ public:
 class Options  {
 private:
 	friend class Game;
+	friend class OptionsReader;
 
 	std::map<std::string, OptionsFieldBase*> m_fields;
 
@@ -115,8 +125,8 @@ private:
 	 */
 	Options()
 	{
-		regField(video.screenWidth, 640);
-		regField(video.screenHeight, 480);
+		regField(video.screenWidth, 640U);
+		regField(video.screenHeight, 480U);
 		regField(video.fullscreen, false);
 
 		regField(audio.musicOn, true);
@@ -185,16 +195,21 @@ public:
 	bool saveToFile(const std::string& fileName);
 
 public:
-	struct  {
-		OptionsField<int> screenWidth;
-		OptionsField<int> screenHeight;
+	struct Video {
+		OptionsField<unsigned int> screenWidth;
+		OptionsField<unsigned int> screenHeight;
 		OptionsField<bool> fullscreen;
 	} video;
 
-	struct  {
+	struct Audio {
 		OptionsField<bool> musicOn;
 		OptionsField<bool> soundsOn;
 	} audio;
+
+public:
+	// Constants
+	static const char *optionsFileName;
+	static const char *defaultSectionName;
 };
 
 #endif

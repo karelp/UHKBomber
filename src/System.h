@@ -20,17 +20,24 @@ private:
 
 	/**
 	 * @brief
-	 * Write brief comment for m_appWindow here.
+	 * Application window pointer.
 	 * 
-	 * Write detailed description for m_appWindow here.
+	 * Points to main application window. The window is closed when the system
+	 * gets deinitialized.
+	 */
+	sf::RenderWindow m_appWindow;
+
+	/**
+	 * @brief
+	 * A flag holding the initialization state of the system.
 	 * 
-	 * @remarks
-	 * Write remarks for m_appWindow here.
+	 * It gets true after the complete system is initialized and
+	 * false when it is completely shut down.
 	 * 
 	 * @see
-	 * Separate items with the '|' character.
+	 * System::initialize | System::shutdown
 	 */
-	sf::RenderWindow *m_appWindow;
+	bool m_initialized;
 
 
 	/**
@@ -43,7 +50,8 @@ private:
 	 * Initializes SFML graphics and audio.
 	 * 
 	 * @remarks
-	 * Used only by Game class at game startup.
+	 * Used only by Game class at game startup. Options must be
+	 * loaded when this method is called.
 	 * 
 	 * @see
 	 * Game::initialize
@@ -63,9 +71,20 @@ private:
 	 */
 	void shutdown();
 
-	System() : m_appWindow(NULL) {}
+	System() : m_initialized(false) {}
 
-	~System();
+public:
+	// Properties
+
+	bool isInitialized() const { return m_initialized; }
+
+	~System() { }
+
+public:
+	// Constants
+
+	static const unsigned int BitsPerPixel = 32;
+	static const unsigned int BytesPerPixel = BitsPerPixel / 8;
 };
 
 #endif
