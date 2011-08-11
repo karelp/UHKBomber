@@ -54,15 +54,17 @@ void Game::run()
 	m_running = true;
 
 	// Just a dummy loop for now, will be replaced later with a more sophisticated implementation
-	sf::Event ev;
 	while (m_running)  {
-		while (m_system.m_appWindow.GetEvent(ev))  {
-			if (ev.Type == sf::Event::Closed)  {
-				m_running = false;
-			}
-		}
+		m_loop.process();
 		sf::Sleep(0.1f);
 	}
+
+	shutdown();
+}
+
+void Game::close()
+{
+	m_running = false;
 }
 
 Game& Game::get()

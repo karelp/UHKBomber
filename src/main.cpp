@@ -27,5 +27,4 @@ int main(int argc, const char *argv[])
 {
 	Game::get().initialize(convertParams(argc, argv));
 	Game::get().run();
-	Game::get().shutdown();
 }

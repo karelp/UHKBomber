@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Events">
+      <UniqueIdentifier>{5d80238c-4a13-4264-b679-e77cf4e226e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Events\Handlers">
+      <UniqueIdentifier>{236f02af-3400-49d8-ab1c-6cc24be4aa84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp">
@@ -30,6 +36,12 @@
     <ClCompile Include="..\..\src\IniReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\EventLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\events\handlers\CloseEventHandler.cpp">
+      <Filter>Header Files\Events\Handlers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Game.h">
@@ -43,6 +55,24 @@
     </ClInclude>
     <ClInclude Include="..\..\src\IniReader.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\EventLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\events\SystemEvent.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\events\MouseEvent.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\events\KeyboardEvent.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\events\CloseEvent.h">
+      <Filter>Header Files\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\events\handlers\CloseEventHandler.h">
+      <Filter>Header Files\Events\Handlers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

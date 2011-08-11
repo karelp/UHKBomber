@@ -6,6 +6,7 @@
 
 #include "Options.h"
 #include "System.h"
+#include "EventLoop.h"
 
 /**
  * @brief
@@ -45,10 +46,18 @@ private:
 	 */
 	System m_system;
 
+
+	/**
+	 * @brief
+	 * Event and user callback handling.
+	 */
+	EventLoop m_loop;
+
 private:
 	Game() :
 		m_initialized(false),
-		m_running(false) 
+		m_running(false),
+		m_loop(m_system)
 		{}
 		
 
@@ -69,6 +78,14 @@ private:
 	 * Options::loadFromFile
 	 */
 	void parseCommandLine(const std::list<std::string>& parameters);
+
+	/**
+	 * @brief
+	 * Shuts the game down.
+	 * 
+	 * Frees all resources and graphics context and then exits the program.
+	 */
+	void shutdown();
 
 public:
 	/**
@@ -94,12 +111,12 @@ public:
 
 	/**
 	 * @brief
-	 * Shuts the game down.
+	 * Ends the game loop.
 	 * 
-	 * Frees all resources and graphics context and then exits the program.
+	 * Sets the running flag to false. This terminates the game loop,
+	 * and finally quits the game.
 	 */
-	void shutdown();
-
+	void close();
 
 	/**
 	 * @brief

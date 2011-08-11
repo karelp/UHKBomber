@@ -17,6 +17,7 @@
 class System  {
 private:
 	friend class Game;
+	friend class EventLoop;
 
 	/**
 	 * @brief
