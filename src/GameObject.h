@@ -19,10 +19,12 @@ public:
 	  m_x(x), m_y(y), m_width(width), m_height(height) 
 	  {}
 
+	virtual bool checkCollision(GameObject& other) = 0;
+	virtual bool acceptCollision(GameObject& oth) = 0;
+
 protected:
 	float m_x, m_y, m_width, m_height;
-	
-	// TODO default collision detection
+
 };
 
 #endif

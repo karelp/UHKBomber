@@ -67,7 +67,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <AdditionalIncludeDirectories>../../src</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;SFML_DYNAMIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -88,8 +88,10 @@
     <ClCompile Include="..\..\src\System.cpp" />
     <ClCompile Include="..\..\src\Tile.cpp" />
     <ClCompile Include="..\..\src\tiles\EmptyTile.cpp" />
+    <ClCompile Include="..\..\src\World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\CollidableObject.h" />
     <ClInclude Include="..\..\src\GameObject.h" />
     <ClInclude Include="..\..\src\Level.h" />
     <ClInclude Include="..\..\src\Renderable.h" />
@@ -107,6 +109,7 @@
     <ClInclude Include="..\..\src\System.h" />
     <ClInclude Include="..\..\src\Tile.h" />
     <ClInclude Include="..\..\src\tiles\EmptyTile.h" />
+    <ClInclude Include="..\..\src\World.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="properties.props" />

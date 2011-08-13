@@ -66,6 +66,9 @@
     <ClCompile Include="..\..\src\tiles\EmptyTile.cpp">
       <Filter>Source Files\Tiles</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Game.h">
@@ -118,6 +121,12 @@
     </ClInclude>
     <ClInclude Include="..\..\src\tiles\EmptyTile.h">
       <Filter>Header Files\Tiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\CollidableObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\World.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -3,6 +3,8 @@
 
 #include <vector>
 #include "GameObject.h"
+#include "Simulable.h"
+#include "Renderable.h"
 
 /**
  * @brief
@@ -16,7 +18,7 @@
  * @see
  * Separate items with the '|' character.
  */
-class World : public GameObject  {
+class World : public Simulable, public Renderable  {
 private:
 	std::vector<GameObject *> m_allObjects;
 

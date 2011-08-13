@@ -2,7 +2,7 @@
 #define TILE_H
 
 #include <SFML/Graphics/Sprite.hpp>
-#include "GameObject.h"
+#include "CollidableObject.h"
 
 /**
  * @brief
@@ -11,11 +11,11 @@
  * Tile contains information about image which should be draw on some surface.
  * 
  * @see
- * GameObject
+ * CollidableObject
  */
-class Tile : public GameObject {
+class Tile : public CollidableObject<Tile> {
 public:
-	Tile(float x, float y, sf::Sprite &sprite) : GameObject(x, y, sprite.GetSize().x, sprite.GetSize().y), sprite(sprite) {};
+	Tile(float x, float y, sf::Sprite &sprite) : CollidableObject<Tile>(x, y, sprite.GetSize().x, sprite.GetSize().y), sprite(sprite) {};
 	
 	virtual void render(sf::RenderTarget& target, DeltaTime dt);
 	
@@ -23,7 +23,6 @@ public:
 
 private:
 	sf::Sprite sprite;
-
 };
 
 #endif
