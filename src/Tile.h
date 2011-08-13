@@ -2,6 +2,7 @@
 #define TILE_H
 
 #include <SFML\Graphics\Sprite.hpp>
+#include "GameObject.h"
 
 /**
  * @brief
@@ -14,7 +15,11 @@
  */
 class Tile : public GameObject {
 public:
-	sf::Sprite getSprite();
+	Tile(Sprite sprite) : sprite(sprite) {};
+	
+	virtual void render(sf::RenderTarget& target, DeltaTime dt);
+	
+	sf::Sprite& getSprite();
 
 private:
 	sf::Sprite sprite;

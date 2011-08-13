@@ -20,7 +20,7 @@ public:
 	 * The render target for the object to be rendered to.
 	 * 
 	 * @param dt
-	 * Delta time of last frame.
+	 * Delta time of last frame. (Will be used for BLUR post-process ;])
 	 * 
 	 * Performs rendering of the object at the given surface.
 	 * The surface can be a window, buffer or anything that implements
