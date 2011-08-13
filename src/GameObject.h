@@ -15,6 +15,6 @@
  */
 class GameObject : public Renderable, public Simulable {
 	// TODO default collision detection
-}
+};
 
 #endif
