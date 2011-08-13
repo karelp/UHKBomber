@@ -8,6 +8,7 @@
 #include "System.h"
 #include "EventLoop.h"
 #include "FPS.h"
+#include "World.h"
 
 /**
  * @brief
@@ -59,6 +60,12 @@ private:
 	 * FPS calculation.
 	 */
 	Fps m_fps;
+
+	/**
+	 * @brief
+	 * The game world simulation and rendering.
+	 */
+	World m_world;
 
 private:
 	Game() :

@@ -16,6 +16,12 @@ bool System::initialize()
 	return true;
 }
 
+void System::updateScreen()
+{
+	m_appWindow.Display();
+	m_appWindow.Clear();
+}
+
 void System::shutdown()
 {
 	if (!m_initialized)
@@ -25,3 +31,4 @@ void System::shutdown()
 
 	m_initialized = false;
 }
+

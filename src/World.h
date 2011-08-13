@@ -5,6 +5,7 @@
 #include "GameObject.h"
 #include "Simulable.h"
 #include "Renderable.h"
+#include "Level.h"
 
 /**
  * @brief
@@ -22,7 +23,11 @@ class World : public Simulable, public Renderable  {
 private:
 	std::vector<GameObject *> m_allObjects;
 
+	Level m_level;
+
 public:
+	World() : m_level(42, 42) {} // TODO: just temporary
+
 	void initialize();
 
 	void simulate(DeltaTime dt);

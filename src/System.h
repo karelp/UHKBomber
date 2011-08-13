@@ -72,6 +72,14 @@ private:
 	 */
 	void shutdown();
 
+	/**
+	 * @brief
+	 * Updates the game screen (flips buffers, updates OGL) and then clears it for the next frame.
+	 * 
+	 * Draws current contents of the framebuffer on the screen and then clears the framebuffer.
+	 */
+	void updateScreen();
+
 	System() : m_initialized(false) {}
 
 public:

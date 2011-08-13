@@ -57,6 +57,9 @@ void Game::run()
 	while (m_running)  {
 		m_fps.onFrame();
 		m_loop.process();
+		m_world.simulate(m_fps.getDelta());
+		m_world.render(m_system.m_appWindow, m_fps.getDelta());
+		m_system.updateScreen();
 	}
 
 	shutdown();
