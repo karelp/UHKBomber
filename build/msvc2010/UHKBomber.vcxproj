@@ -96,6 +96,8 @@
     <ClInclude Include="..\..\src\IniReader.h" />
     <ClInclude Include="..\..\src\Options.h" />
     <ClInclude Include="..\..\src\System.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Level.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="properties.props" />
