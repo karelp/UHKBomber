@@ -85,6 +85,7 @@
     <ClCompile Include="..\..\src\System.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\Renderable.h" />
     <ClInclude Include="..\..\src\EventLoop.h" />
     <ClInclude Include="..\..\src\events\CloseEvent.h" />
     <ClInclude Include="..\..\src\events\handlers\CloseEventHandler.h" />
@@ -95,6 +96,7 @@
     <ClInclude Include="..\..\src\Game.h" />
     <ClInclude Include="..\..\src\IniReader.h" />
     <ClInclude Include="..\..\src\Options.h" />
+    <ClInclude Include="..\..\src\Simulable.h" />
     <ClInclude Include="..\..\src\System.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Level.h" />
