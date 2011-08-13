@@ -15,7 +15,7 @@
  */
 class Tile : public GameObject {
 public:
-	Tile(sf::Sprite &sprite) : sprite(sprite) {};
+	Tile(float x, float y, sf::Sprite &sprite) : GameObject(x, y, sprite.GetSize().x, sprite.GetSize().y), sprite(sprite) {};
 	
 	virtual void render(sf::RenderTarget& target, DeltaTime dt);
 	

@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Events\Handlers">
       <UniqueIdentifier>{e1891f34-b9b7-494b-af19-e189ae544b32}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Tiles">
+      <UniqueIdentifier>{999d2638-4ac6-48f9-9224-c7da0037a07d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tiles">
+      <UniqueIdentifier>{dcfb95c0-9500-4bc4-9782-270cb8c8e7e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp">
@@ -56,6 +62,9 @@
     </ClCompile>
     <ClCompile Include="..\..\src\Tile.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\tiles\EmptyTile.cpp">
+      <Filter>Source Files\Tiles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -106,6 +115,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Tile.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\tiles\EmptyTile.h">
+      <Filter>Header Files\Tiles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

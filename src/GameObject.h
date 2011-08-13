@@ -14,6 +14,14 @@
  * Renderable | Simulable
  */
 class GameObject : public Renderable, public Simulable {
+public:
+	GameObject(float x, float y, float width = 1, float height = 1) : 
+	  m_x(x), m_y(y), m_width(width), m_height(height) 
+	  {}
+
+protected:
+	float m_x, m_y, m_width, m_height;
+	
 	// TODO default collision detection
 };
 
