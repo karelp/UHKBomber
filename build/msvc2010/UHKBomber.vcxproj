@@ -98,7 +98,8 @@
     <ClInclude Include="..\..\src\Options.h" />
     <ClInclude Include="..\..\src\Simulable.h" />
     <ClInclude Include="..\..\src\System.h" />
-    <ClInclude Include="..\..\src\World.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Level.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="properties.props" />
