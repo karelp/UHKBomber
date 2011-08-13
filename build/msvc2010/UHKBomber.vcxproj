@@ -80,11 +80,15 @@
     <ClCompile Include="..\..\src\FPS.cpp" />
     <ClCompile Include="..\..\src\Game.cpp" />
     <ClCompile Include="..\..\src\IniReader.cpp" />
+    <ClCompile Include="..\..\src\Level.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\Options.cpp" />
     <ClCompile Include="..\..\src\System.cpp" />
+    <ClCompile Include="..\..\src\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\GameObject.h" />
+    <ClInclude Include="..\..\src\Level.h" />
     <ClInclude Include="..\..\src\Renderable.h" />
     <ClInclude Include="..\..\src\EventLoop.h" />
     <ClInclude Include="..\..\src\events\CloseEvent.h" />
@@ -98,8 +102,7 @@
     <ClInclude Include="..\..\src\Options.h" />
     <ClInclude Include="..\..\src\Simulable.h" />
     <ClInclude Include="..\..\src\System.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Level.h" />
+    <ClInclude Include="..\..\src\Tile.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="properties.props" />

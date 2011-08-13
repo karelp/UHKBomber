@@ -51,6 +51,12 @@
     <ClCompile Include="..\..\src\events\handlers\CloseEventHandler.cpp">
       <Filter>Source Files\Events\Handlers</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Tile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Game.h">
@@ -86,7 +92,23 @@
     <ClInclude Include="..\..\src\FPS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-	<ClInclude Include="Level.h">      <Filter>Header Files</Filter>    </ClInclude>    <ClInclude Include="GameObject.h">      <Filter>Header Files</Filter>    </ClInclude>	<ClInclude Include="..\..\src\Simulable.h">      <Filter>Header Files</Filter>    </ClInclude>    <ClInclude Include="..\..\src\Renderable.h">      <Filter>Header Files</Filter>    </ClInclude>    <ClInclude Include="..\..\src\World.h">      <Filter>Header Files</Filter>    </ClInclude>  </ItemGroup>  <ItemGroup>
+    <ClInclude Include="..\..\src\Simulable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Renderable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Tile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="properties.props" />
   </ItemGroup>
 </Project>
