@@ -19,6 +19,12 @@
     <Filter Include="Header Files\Events\Handlers">
       <UniqueIdentifier>{236f02af-3400-49d8-ab1c-6cc24be4aa84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Events">
+      <UniqueIdentifier>{220cdbf1-c0d0-4dac-8e86-d86cef5ae2be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Events\Handlers">
+      <UniqueIdentifier>{e1891f34-b9b7-494b-af19-e189ae544b32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\main.cpp">
@@ -39,8 +45,11 @@
     <ClCompile Include="..\..\src\EventLoop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\FPS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\src\events\handlers\CloseEventHandler.cpp">
-      <Filter>Header Files\Events\Handlers</Filter>
+      <Filter>Source Files\Events\Handlers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\events\handlers\CloseEventHandler.h">
       <Filter>Header Files\Events\Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\FPS.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

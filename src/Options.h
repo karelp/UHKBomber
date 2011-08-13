@@ -128,6 +128,7 @@ private:
 		regField(video.screenWidth, 640U);
 		regField(video.screenHeight, 480U);
 		regField(video.fullscreen, false);
+		regField(video.fpsLimit, 60U);
 
 		regField(audio.musicOn, true);
 		regField(audio.soundsOn, true);
@@ -199,7 +200,9 @@ public:
 		OptionsField<unsigned int> screenWidth;
 		OptionsField<unsigned int> screenHeight;
 		OptionsField<bool> fullscreen;
+		OptionsField<unsigned int> fpsLimit;
 	} video;
+
 
 	struct Audio {
 		OptionsField<bool> musicOn;

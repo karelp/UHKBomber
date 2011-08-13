@@ -7,6 +7,7 @@
 #include "Options.h"
 #include "System.h"
 #include "EventLoop.h"
+#include "FPS.h"
 
 /**
  * @brief
@@ -53,11 +54,18 @@ private:
 	 */
 	EventLoop m_loop;
 
+	/**
+	 * @brief
+	 * FPS calculation.
+	 */
+	Fps m_fps;
+
 private:
 	Game() :
 		m_initialized(false),
 		m_running(false),
-		m_loop(m_system)
+		m_loop(m_system),
+		m_fps(m_system.m_appWindow)
 		{}
 		
 

@@ -77,6 +77,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\EventLoop.cpp" />
     <ClCompile Include="..\..\src\events\handlers\CloseEventHandler.cpp" />
+    <ClCompile Include="..\..\src\FPS.cpp" />
     <ClCompile Include="..\..\src\Game.cpp" />
     <ClCompile Include="..\..\src\IniReader.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
@@ -90,6 +91,7 @@
     <ClInclude Include="..\..\src\events\KeyboardEvent.h" />
     <ClInclude Include="..\..\src\events\MouseEvent.h" />
     <ClInclude Include="..\..\src\events\SystemEvent.h" />
+    <ClInclude Include="..\..\src\FPS.h" />
     <ClInclude Include="..\..\src\Game.h" />
     <ClInclude Include="..\..\src\IniReader.h" />
     <ClInclude Include="..\..\src\Options.h" />

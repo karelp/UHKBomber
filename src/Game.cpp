@@ -55,8 +55,8 @@ void Game::run()
 
 	// Just a dummy loop for now, will be replaced later with a more sophisticated implementation
 	while (m_running)  {
+		m_fps.onFrame();
 		m_loop.process();
-		sf::Sleep(0.1f);
 	}
 
 	shutdown();
