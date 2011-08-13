@@ -1,7 +1,7 @@
 #ifndef TILE_H
 #define TILE_H
 
-#include <SFML\Graphics\Sprite.hpp>
+#include <SFML/Graphics/Sprite.hpp>
 #include "GameObject.h"
 
 /**
@@ -15,7 +15,7 @@
  */
 class Tile : public GameObject {
 public:
-	Tile(Sprite sprite) : sprite(sprite) {};
+	Tile(sf::Sprite &sprite) : sprite(sprite) {};
 	
 	virtual void render(sf::RenderTarget& target, DeltaTime dt);
 	
@@ -24,6 +24,6 @@ public:
 private:
 	sf::Sprite sprite;
 
-}
+};
 
 #endif

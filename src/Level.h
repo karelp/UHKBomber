@@ -1,6 +1,9 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
+#include <boost/multi_array.hpp>
+#include "Tile.h"
+
 /**
  * @brief
  * Container for whole level information.
@@ -23,9 +26,9 @@ public:
 private:
 	Tile* levelData;
 	
-	typedef boost::multi_array<Tile, 2> tile_array;
+	typedef boost::multi_array<Tile*, 2> tile_array;
 	typedef tile_array::index index;
-	tile_array 
+	tile_array m_tileArray;
 };
 
 #endif
