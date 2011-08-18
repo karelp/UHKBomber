@@ -4,7 +4,8 @@
 
 void EmptyTile::render(sf::RenderTarget& target, DeltaTime dt) 
 {
-	static sf::Shape rect = sf::Shape::Rectangle(m_x, m_y, m_width, m_height, sf::Color::Green);
+	static sf::Shape rect = sf::Shape::Rectangle(m_x, m_y, m_width, m_height, sf::Color::Green, 1, sf::Color::Black);
+	rect.SetPosition(m_x, m_y);
 	target.Draw(rect);
 }
 

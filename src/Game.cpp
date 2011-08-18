@@ -32,6 +32,8 @@ bool Game::initialize(const std::list<std::string>& parameters)
 		return false;
 	}
 
+	m_world.initialize();
+
 	m_initialized = true;
 	m_running = false;
 	return true;

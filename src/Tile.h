@@ -15,7 +15,7 @@
  */
 class Tile : public CollidableObject<Tile> {
 public:
-	Tile(float x, float y, sf::Sprite &sprite) : CollidableObject<Tile>(x, y, sprite.GetSize().x, sprite.GetSize().y), sprite(sprite) {};
+	Tile(float x, float y, sf::Sprite &sprite);
 	
 	virtual void render(sf::RenderTarget& target, DeltaTime dt);
 	

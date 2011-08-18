@@ -85,6 +85,7 @@
     <ClCompile Include="..\..\src\Level.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\Options.cpp" />
+    <ClCompile Include="..\..\src\Player.cpp" />
     <ClCompile Include="..\..\src\System.cpp" />
     <ClCompile Include="..\..\src\Tile.cpp" />
     <ClCompile Include="..\..\src\tiles\EmptyTile.cpp" />
@@ -94,6 +95,7 @@
     <ClInclude Include="..\..\src\CollidableObject.h" />
     <ClInclude Include="..\..\src\GameObject.h" />
     <ClInclude Include="..\..\src\Level.h" />
+    <ClInclude Include="..\..\src\Player.h" />
     <ClInclude Include="..\..\src\Renderable.h" />
     <ClInclude Include="..\..\src\EventLoop.h" />
     <ClInclude Include="..\..\src\events\CloseEvent.h" />

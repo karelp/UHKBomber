@@ -6,6 +6,7 @@
 #include "Simulable.h"
 #include "Renderable.h"
 #include "Level.h"
+#include "Player.h"
 
 /**
  * @brief
